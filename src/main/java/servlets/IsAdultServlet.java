@@ -15,7 +15,7 @@ public class IsAdultServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         resp.setContentType("text/html");
         PrintWriter writer = resp.getWriter();
-        writer.println("вы "+(Integer.parseInt(req.getParameter("age"))<18?"не":"")+" совершеннолетний");
+        writer.println("вы " + (Integer.parseInt(req.getParameter("age")) < 18 ? "не" : "") + " совершеннолетний");
         writer.close();
     }
 }
